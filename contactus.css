@@ -1,0 +1,327 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background: steelblue;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 500;
+}
+
+label.logo {
+    color: white;
+    font-size: 36px;
+    line-height: 80px;
+    padding: 0 96px;
+    font-weight: bold;
+    color: orange;
+}
+
+span {
+    color: aqua;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+a.active,
+a:hover {
+    background: #1b9bff;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+    float: right;
+}
+
+@media (max-width: 100px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 45px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+
+}
+
+@media (max-width: 1190px) {
+    .checkbtn {
+        display: block;
+    }
+
+    label.logo {
+        font-size: 32px;
+        padding-left: 41px;
+    }
+
+    .span {
+        font-size: 13px;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+}
+
+/*----Contact Us-----*/
+#contact {
+    background-color: azure;
+    padding-top: 75px;
+    width: 100%;
+    height: auto;
+
+}
+
+.container {
+    width: 100%;
+    height: auto;
+}
+
+#contact h1 {
+    padding: 30px;
+    text-align: center;
+}
+
+.message {
+    padding-left: 130px;
+}
+
+input {
+    width: 340px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: justify;
+    border-color: darkorange;
+    outline: none;
+    margin-bottom: 5px;
+    border-bottom-color: darkorange;
+}
+
+textarea {
+    width: 340px;
+    height: 120px;
+    border-radius: 5px;
+    border-color: darkorange;
+    outline: none;
+    border-bottom-color: darkorange;
+}
+
+.send {
+    background-color: orange;
+    text-align: center;
+    font-family: inherit;
+    height: 37px;
+    width: 310px;
+    transition: 1s;
+}
+
+.send:hover {
+    background-color: darkorange;
+    height: 40px;
+    font-weight: bold;
+}
+
+.address {
+    padding-left: 60px;
+    padding-bottom: 30px;
+}
+
+h4 {
+    padding-bottom: 20px;
+}
+
+.fa {
+    padding: 10px;
+    color: orange;
+}
+
+.contact_logo {
+    width: 340px;
+    height: auto;
+}
+
+@media (max-width: 100px) {
+    #contact h1 {
+        padding: 17px;
+        text-align: center;
+    }
+
+    .message {
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        text-align: justify;
+        border-color: darkorange;
+        border-bottom-color: darkorange;
+    }
+
+    textarea {
+        width: 100%;
+        height: 150px;
+        border-radius: 10px;
+        border-color: darkorange;
+        border-bottom-color: darkorange;
+    }
+
+    .send {
+        background-color: orange;
+        text-align: center;
+        font-family: inherit;
+        height: 40px;
+        transition: 1s;
+        height: auto;
+    }
+
+    .send:hover {
+        background-color: darkorange;
+        height: 43px;
+        font-weight: bold;
+    }
+
+    .address {
+        padding-top: 30px;
+        padding-left: 25px;
+        padding-bottom: 30px;
+    }
+
+    h4 {
+        padding-bottom: 6px;
+    }
+
+    .fa {
+        padding: 10px;
+        color: orange;
+    }
+
+
+}
+
+@media (max-width: 1190px) {
+    #contact h1 {
+        padding: 20px;
+    }
+
+    .message {
+        padding-left: 20px;
+        text-align: center;
+        height: auto;
+    }
+
+    input {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        text-align: justify;
+        border-color: darkorange;
+        border-bottom-color: darkorange;
+    }
+
+    textarea {
+        width: 100%;
+        height: 120px;
+        border-radius: 5px;
+        border-color: darkorange;
+        border-bottom-color: darkorange;
+    }
+
+    .send {
+        background-color: orange;
+        text-align: center;
+        font-family: inherit;
+        height: 45px;
+        transition: 1s;
+    }
+
+    .send:hover {
+        background-color: darkorange;
+        height: 40px;
+        font-weight: bold;
+    }
+
+    .address {
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+    }
+
+    h4 {
+        padding-bottom: 6px;
+    }
+
+    .fa {
+        padding: 10px;
+        color: orange;
+    }
+
+
+
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>contact us</title>
+    <link rel="stylesheet" type="text/css" href="contactus.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+
+
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <label class="logo">TZEL <span>.org</span></label>
+        <ul>
+            <li><a class="active" href="index.html">HOME</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="aboutus.html">OUR TEAM</a></li>
+            <li><a href="contactus.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+    <!-----Contact Us----->
+    <section id="contact">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="row contact">
+                <div class="col-md-5">
+                    <form method="post" autocomplete="off" name="google-sheet">
+                        <div class="message">
+                            <input type="text" name="Name" class="form-control" placeholder="   Your name" required>
+                            <br><br>
+                            <input type="email" name="Email" class="form-control" placeholder="   Your Email" required>
+                            <br><br>
+                            <textarea type="message" name="Phone" class="form-control" placeholder=" Message" row="7" required></textarea>
+                            <br><br><br>
+                            <input type="submit" name="submit" class="send" value="  SEND MESSAGE  ">
+
+
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="address">
+                        <h4>Address: <i class="fa fa-map-marker"></i>Mandalay, Myanmar</h4>
+                        <h4>Phone: <i class="fa fa-phone"></i>+95 9453477564</h4>
+                        <h4>Email: <i class="fa fa-envelope"></i>tzel4768@gmail.com</h4>
+                        <img class="contact_logo" src="img/1.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx0lqYUCc5QQWcyL8fBcuBT_8_pf36Ii6FnCr0douYH8yuwt80/exec'
+        const form = document.forms['google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+        })
+
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+
+</html>

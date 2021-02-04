@@ -1,0 +1,217 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background: steelblue;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+
+label.logo {
+    color: white;
+    font-size: 36px;
+    line-height: 80px;
+    padding: 0 96px;
+    font-weight: bold;
+    color: orange;
+}
+
+span {
+    color: aqua;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+a.active,
+a:hover {
+    background: #1b9bff;
+    transition: .5s
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+    float: right;
+}
+
+@media (max-width: 100px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 45px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+
+}
+
+@media (max-width: 1190px) {
+    .checkbtn {
+        display: block;
+    }
+
+    label.logo {
+        font-size: 32px;
+        padding-left: 41px;
+    }
+
+    .span {
+        font-size: 13px;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+}
+
+/*----home----*/
+.imgone {
+    width: 100%;
+    height: auto;
+    margin-top: 78px;
+
+}
+
+.welcome {
+    background-image: url(img/a4.jpg);
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.welcome > h3 {
+    color: black;
+    font-size: 100px;
+    padding-top: 120px;
+    text-align: center;
+}
+
+h3 > spam {
+    color: orange;
+    text-shadow: 0px 6px 9px gray;
+}
+
+.welcome > a {
+    font-size: 30px;
+    text-decoration: none;
+    background-color: darkorange;
+    padding: 5px;
+    padding-top: 3px;
+    padding-left: 3px;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 35px;
+    border-radius: 30px;
+}
+
+@media (max-width: 95px) {
+    .welcome > h3 {
+        color: black;
+        font-size: 80px;
+        padding-top: 120px;
+        text-align: center;
+
+    }
+
+    .welcome > a {
+        font-size: 38px;
+        background-color: darkorange;
+        border-radius: 15px;
+        padding: 8px;
+        border-color: cadetblue;
+        outline: none;
+        padding-top: 5px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .welcome > h3 {
+        color: black;
+        font-size: 60px;
+        padding-top: 120px;
+
+    }
+
+    .welcome > a {
+        font-size: 20px;
+        background-color: darkorange;
+        border-radius: 15px;
+        padding: 8px;
+        outline: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+    }
+}
+
+.aitt > img {
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+}
